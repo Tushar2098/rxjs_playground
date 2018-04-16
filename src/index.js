@@ -1,3 +1,3 @@
-import App from './tut01';
+import App from './tut02';
 
 App();
