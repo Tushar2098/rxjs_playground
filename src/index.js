@@ -1,3 +1,3 @@
-import App from './operators/last-takeLast-skipLast';
+import App from './operators/concat-startWith';
 
 App();
