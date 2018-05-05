@@ -1,3 +1,3 @@
-import App from './tut02';
+import App from './operators/first-take-skip';
 
 App();
