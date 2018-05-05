@@ -9,11 +9,13 @@ const bufferApp = () => {
     .get(0);
   const bufferBy = Rx.Observable.fromEvent(buttonEl, 'click');
   const bufferedInterval$ = interval$.pipe(buffer(bufferBy));
-
+  // step 1. buffer(bufferBy) => by what means we should collect/buffer the items -- here it is click
+  // step 2. interval$.buffer(bufferBy) => what we want to buffer -- here it is interval
   const subscribe = bufferedInterval$.subscribe(val => console.log(' Buffered Values:', val));
 };
+
 const App = () => {
-  bufferApp();
+  // bufferApp();
   const buttonEl = $('#tut02')
     .children('button')
     .get(0);
@@ -24,7 +26,7 @@ const App = () => {
 
   const clickStream$ = Rx.Observable.fromEvent(buttonEl, 'click');
 
-  const doubleClickStream$ = clickStream$.buffer(() => clickStream$.throttle(250)).map(arr => {
+  const doubleClickStream$ = clickStream$.buffer(clickStream$.throttleTime(250)).map(arr => {
     console.log('arr', arr);
     return arr.length;
   });
@@ -32,7 +34,7 @@ const App = () => {
   doubleClickStream$.subscribe(event => {
     label.textContent = 'Double Click';
   });
-  doubleClickStream$.throttle(1000).subscribe(suggestion => {
+  doubleClickStream$.throttleTime(1000).subscribe(suggestion => {
     label.textContent = '-';
   });
 };
