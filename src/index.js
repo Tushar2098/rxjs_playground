@@ -1,3 +1,3 @@
-import App from './operators/first-take-skip';
+import App from './operators/last-takeLast-skipLast';
 
 App();
