@@ -1,3 +1,3 @@
-import App from './operators/concat-startWith';
+import App from './operators/merge';
 
 App();
