@@ -1,3 +1,3 @@
-import App from './operators/merge';
+import App from './operators/combineLatest';
 
 App();
