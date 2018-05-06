@@ -1,3 +1,3 @@
-import App from './operators/withLatestFrom';
+import App from './operators/scan';
 
 App();
