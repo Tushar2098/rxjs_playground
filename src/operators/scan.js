@@ -6,6 +6,7 @@ const App = () => {
                 .take(5)
                 .zip(Rx.Observable.of('h', 'e', 'l', 'l', 'o'), (_,c) => c)
                 .scan((acc, value) => acc + value, '');
+                
 // combineLatest -----| 
 // merge              |--> Vertical Ops 
 // withLatestFrom ----|

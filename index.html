@@ -5,20 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Rxjs Playground</title>
     <style>
+        h5{
+            margin-top:30px;
+        }
         .row {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 50px;
+            border-bottom: 5px solid #eee;
+            height: 100px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            width:450px;
         }
     </style>
 </head>
 
-<body>
-    <h3>RxJS Playground</h3>
+<body class="container">
+    <h5>RxJS Playground</h5>
     <div class="row" id="tut02">
-        <button>Tut02</button>
+        <button class="btn btn-dark">Tut02</button>
         <label></label>
+    </div>
+
+    <div>
+        <h5>Stop Watch(Tut03)</h5>
+        <div class="row" id="tut03">
+            <button class="btn btn-warning" id="start">Start</button>
+            <button class="btn btn-danger" id="stop">Stop</button>
+            <button class="btn btn-primary" id="reset">Reset</button>
+        </div>
     </div>
     <script src="bundle.js"></script>
 </body>
