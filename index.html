@@ -8,34 +8,57 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Rxjs Playground</title>
     <style>
-        h5{
-            margin-top:30px;
+        h5 {
+            margin-top: 30px;
         }
-        .row {
+.row{
+    margin-top: 10%;;
+}
+        /* .row {
             border-bottom: 5px solid #eee;
             height: 100px;
-            display:flex;
+            display: flex;
             align-items: center;
             justify-content: space-between;
-            width:450px;
-        }
+        } */
     </style>
 </head>
 
 <body class="container">
-    <h5>RxJS Playground</h5>
-    <div class="row" id="tut02">
-        <button class="btn btn-dark">Tut02</button>
-        <label></label>
-    </div>
+    <h3 class="text-center">RxJS Playground</h3>
+    <div class="row">
+        <section class="col-xs-8">
+            <ul class="example__list">
 
-    <div>
-        <h5>Stop Watch(Tut03)</h5>
-        <div class="row" id="tut03">
-            <button class="btn btn-warning" id="start">Start</button>
-            <button class="btn btn-danger" id="stop">Stop</button>
-            <button class="btn btn-primary" id="reset">Reset</button>
-        </div>
+            </ul>
+            <div id="tut02">
+                <button class="btn btn-dark">Tut02</button>
+                <label></label>
+            </div>
+    
+            <div>
+                <h5>Stop Watch(Tut03)</h5>
+                <div id="tut03">
+                    <button class="btn btn-warning" id="start">Start</button>
+                    <button class="btn btn-danger" id="stop">Stop</button>
+                    <button class="btn btn-primary" id="reset">Reset</button>
+                </div>
+            </div>
+    
+            <div>
+                <h5>Stop Watch(Tut04)</h5>
+                <div id="tut04">
+                    <button class="btn btn-warning" id="start">Start (1s)</button>
+                    <button class="btn btn-success" id="half">Half(0.5s)</button>
+                    <button class="btn btn-dark" id="quarter">Quarter(0.25s)</button>
+                    <button class="btn btn-danger" id="stop">Stop</button>
+                    <button class="btn btn-primary" id="reset">Reset</button>
+                </div>
+            </div>
+        </section>
+        <section class="col-xs-4 console">
+            <h3>Console</h3>
+        </section>
     </div>
     <script src="bundle.js"></script>
 </body>
