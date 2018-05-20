@@ -1,4 +1,4 @@
-// import './style.scss';
-import App from './tut04(stopwatch-extended)';
+import './style.scss';
+import App from './tut05';
 
 App();
