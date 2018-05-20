@@ -1,5 +1,6 @@
 import * as Rx from 'rxjs';
 import $ from 'jquery';
+import logger from '../utils/logger';
 
 const App = () => {
   const startBtn = $('#tut04 #start').get(0);
@@ -32,7 +33,7 @@ const App = () => {
     .switchMap(time => intervalActions$(time))
     .startWith(initialData)
     .scan((acc, curr) => curr(acc))
-    .subscribe(x => console.log(x), err => console.log('Error ', err), () => console.log('Completed!!'));
+    .subscribe(x => logger(x), err => logger(err, undefined, 'ERROR'), () => logger('Completed!!'));
 };
 
 export default App;
